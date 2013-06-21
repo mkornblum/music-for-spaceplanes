@@ -1,5 +1,9 @@
 (ns music-for-spaceplanes.core)
 
+;; REMEMBER
+;; (use 'overtone.core)
+;; (connect-external-server 57110)
+
 ;; Mark K - Originally Copypasta'd from https://github.com/overtone/overtone/wiki/Chords-and-scales
 
 (definst square-wave [freq 220 attack 0.2 sustain 0.5 release 0.3 vol 0.70]
