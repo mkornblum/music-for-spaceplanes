@@ -36,8 +36,9 @@
 ;; Let's make it even easier
 (defn square2 [music-note]
   (square-wave (midi->hz (note music-note)) 0.55)
-  (square-wave (fourth (midi->hz (note music-note))))
-  )
+;;  (square-wave (octave (midi->hz (note music-note))) 0.15)
+;;  (square-wave (fourth (midi->hz (note music-note))) 0.08 0.3)
+)
 
 ;; Great!
 (square2 :A4)
