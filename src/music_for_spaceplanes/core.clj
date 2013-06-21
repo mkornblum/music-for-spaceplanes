@@ -2,7 +2,7 @@
 
 ;; Mark K - Originally Copypasta'd from https://github.com/overtone/overtone/wiki/Chords-and-scales
 
-(definst square-wave [freq 220 attack 0.2 sustain 0.5 release 0.3 vol 0.75]
+(definst square-wave [freq 220 attack 0.2 sustain 0.5 release 0.3 vol 0.70]
   (* (env-gen (lin-env attack sustain release) 1 1 0 1 FREE)
      (square freq)
      vol))
@@ -31,7 +31,7 @@
 
 ;; Let's make it even easier
 (defn square2 [music-note]
-  (square-wave (midi->hz (note music-note)))
+  (square-wave (midi->hz (note music-note)) 0.55)
   (square-wave (fourth (midi->hz (note music-note))))
   )
 
