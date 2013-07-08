@@ -106,3 +106,21 @@
   (at (m (+ 15 beat-num)) (square2 :C3))
   (apply-at (m (+ 16 beat-num)) riff m (+ 16 beat-num) [])
 )
+
+(defn beat [m beat-num]
+  (at (m (+ 0 beat-num)) (kick))
+  (at (m (+ 1 beat-num)) (snare))
+  (at (m (+ 2 beat-num)) (kick))
+  (at (m (+ 3 beat-num)) (snare))
+  (at (m (+ 4 beat-num)) (kick))
+  (at (m (+ 5 beat-num)) (snare))
+  (at (m (+ 6 beat-num)) (kick))
+  (at (m (+ 7 beat-num)) (snare))
+  (at (m (+ 8 beat-num)) (kick))
+  (apply-at (m (+ 8 beat-num)) beat m (+ 8 beat-num) [])
+)
+
+(defn hat [m beat-num]
+  (at (m (+ 0.5 beat-num)) (closed-hat))
+  (apply-at (m (+ 1 beat-num)) hat m (+ 1 beat-num) [])
+)
